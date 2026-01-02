@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liam & Daniélle | Troue RSVP</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("K6wwNTCRjujBWoqpv");
+})();
+</script>
+
+<body>
+<div class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content" >
+    <br/><h1>Liam & Daniélle</h1>
+    <br/><h3>Saam met jou wil ek ewig wees.</h3>
+    <br/><h2><span id="countdown"></span></h2>
+    </div>
+    </div>
+</header>
+
+<div class="storie-content">
+    <h1>Ons Storie</h1>
+
+        <h2>2022</h2>
+        <img src="WhatsApp Image 2026-01-02 at 16.59.44_a97fec39.jpg" alt="Liam and Daniélle" style="width: 50%;height: 50%;">
+            <p>2022 was die jaar waarin ons mekaar ontmoet het deur 'n gemeenskaplike vriend. Dit was liefde op die eerste oogopslag, en ons het dadelik 'n spesiale band gevorm.</p>
+        <h2>2023</h2>
+            <p>2023 was die jaar waarin ons saam begin het om 'n lewe te leef. Ons het duidelik gevoel dat ons 'n groot toekomst saam het.</p>
+        <h2>2024</h2>
+            <p>2024 was die jaar waarin ons besluit het om ons vertroue te bevestig deur 'n troue te hou.</p>
+        <h2>2025</h2>
+            <p>Die jaar waarin ons besluit het om ons vertroue te bevestig deur 'n troue te hou.</p>
+        <h2>2026</h2>
+            <p>Die jaar waarin ons saam begin het om 'n lewe te leef. Ons het duidelik gevoel dat ons 'n groot toekomst saam het.</p>
+</div>
+
+
+<section class="details">
+  <h1>Ons Troudag</h1>
+  <h3> 17 October 2026 </h3><br>
+    
+      <h2>Kleredrag skema</h2>
+      <h3>Semi-Formal</h3>
+
+      <h2>Die Kleur Skema</h2>
+      <div class="color-palette">
+        <span class="color-circle dusty"></span>
+        <span class="color-circle blush"></span>
+        <span class="color-circle gold"></span>
+        <span class="color-circle orange"></span>
+        </div>
+
+      <h2>Tydlyn</h2>
+      <h3>
+      <p>15:00 - Ceremony begins</p>
+      <p>16:00 - Reception starts</p>
+      </h3>
+
+
+  <section class="map">
+    <h2>Venue Ligging</h2>
+
+  <p>Tjirp – Parys, Vrystaat, South Africa</p>
+
+  <iframe 
+    src="https://www.google.com/maps?q=Tjirp+Parys+Vrystaat+South+Africa&output=embed">
+  </iframe>
+
+  <a class="btn map-btn" 
+     href="https://www.google.com/maps/dir/?api=1&destination=Tjirp+Parys+Vrystaat+South+Africa" 
+     target="_blank">
+     Open Directions
+  </a>
+</section>
+
+</section>
+
+<div>
+    
+    <p>Verblyf Opsies</p>
+
+</div>
+
+<div> 
+
+    <p> V + A</p>
+
+</div>
+
+<div> 
+
+    <P>Trou Register</P>
+
+</div>
+
+
+
+
+
+<section class="rsvp" id="rsvp">
+  <h2>RSVP Hier</h2>
+  <form id="rsvpForm">
+    <input type="text" id="name" placeholder="Naam ne Van" required>
+    <input type="text" id="metgesel" placeholder="Metgesel, indien toepaslik" required>
+    <input type="email" id="email" placeholder="Email Adres" required>
+    <select id="attendance" required>
+      <option value="">Gaan jy ons join?</option>
+      <option value="Yes">Natuurlik Ja!</option>
+      <option value="No">Eerlikwaar, Nee</option>
+    </select>
+    <textarea id="message" placeholder="Advice for the bridal couple..."></textarea>
+    <button type="submit">Send RSVP</button>
+  </form>
+  <p id="successMsg"></p>
+</section>
+
+<footer class="details">
+  <p> Liefde, Liam & Dani ;)</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
