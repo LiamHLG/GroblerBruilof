@@ -2,19 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Liam & Danielle | Wedding RSVP</title>
+  <title>Liam & Daniélle | Troue RSVP</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("K6wwNTCRjujBWoqpv");
+})();
+</script>
+
+
+
 <body>
 
 <header class="hero">
   <div class="overlay"></div>
   <div class="hero-content">
-    <h1>Liam & Danielle</h1>
-    <p>We’re getting married</p>
+    <h1>Liam & Daniélle</h1>
+    <p>These kids are getting Married!!</p>
     <span id="countdown"></span>
-    <a href="#rsvp" class="btn">RSVP Now</a>
+    <a href="#rsvp" class="btn">RSVP hier</a>
   </div>
 </header>
 
@@ -31,7 +41,7 @@
     </div>
     <div class="card accent2">
       <h3>Dress Code</h3>
-      <p>Elegant Formal</p>
+      <p>Semi-Formal</p>
     </div>
     <div class="card accent3">
       <h3>Our Colours</h3>
@@ -39,6 +49,22 @@
     </div>
   </div>
 </section>
+
+<section class="map">
+  <h2>Getting There</h2>
+  <p>Tjirp – Parys, Vrystaat, South Africa</p>
+
+  <iframe 
+    src="https://www.google.com/maps?q=Tjirp+Parys+Vrystaat+South+Africa&output=embed">
+  </iframe>
+
+  <a class="btn map-btn" 
+     href="https://www.google.com/maps/dir/?api=1&destination=Tjirp+Parys+Vrystaat+South+Africa" 
+     target="_blank">
+     Open Directions
+  </a>
+</section>
+
 
 <section class="rsvp" id="rsvp">
   <h2>Kindly Respond</h2>
@@ -50,14 +76,14 @@
       <option value="Yes">Joyfully Accept</option>
       <option value="No">Regretfully Decline</option>
     </select>
-    <textarea id="message" placeholder="Leave us a message..."></textarea>
+    <textarea id="message" placeholder="Advice for the bridal couple..."></textarea>
     <button type="submit">Send RSVP</button>
   </form>
   <p id="successMsg"></p>
 </section>
 
 <footer>
-  <p>With love, Liam & Danielle ❤️</p>
+  <p>Met liefde, Liam & Daniélle ❤️</p>
 </footer>
 
 <script src="script.js"></script>
