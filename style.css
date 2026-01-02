@@ -1,25 +1,66 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: #afc5da;
+  background: #ffffff;
   color: #333;
 }
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(175,197,218,0.8), rgba(175,197,218,0.8)),
-              url('https://images.unsplash.com/photo-1529634894518-1b81b13a21b1') center/cover no-repeat;
+  background: #afc5da url('L+D-05315.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  transition: opacity 0.1s ease;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); 
+  z-index: 1;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  color: #ffffff;
-  padding-top: 25vh;
+  top: 40%;
+  transform: translateY(-40%);
+  color: #fff;
+  padding: 0 20px;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 64px;
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+}
+
+.hero h3 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: lighter;
+  font-size: 1.8rem;
+}
+
+.storie-content {
+  padding: 80px 10%;
+  text-align: center;
+  background: #ffffff;
+  color: #000000;
+}
+
+.storie-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+}
+
+.storie-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
 }
 
 .btn {
@@ -34,6 +75,16 @@ body {
   background: #ffffff;
   padding: 80px 10%;
   text-align: center;
+}
+
+.details h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+}
+
+.details h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
 }
 
 .cards {
@@ -96,3 +147,23 @@ button {
 .map-btn {
   background: #f1c064;
 }
+
+.color-palette {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.color-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border: 3px solid #fff;
+}
+
+.color-circle.dusty  { background: #afc5da; }
+.color-circle.blush  { background: #e68688; }
+.color-circle.gold   { background: #f1c064; }
+.color-circle.orange { background: #e47e34; }

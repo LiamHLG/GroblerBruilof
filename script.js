@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const weddingDate = new Date("Oct 17, 2026 15:00:00").getTime();
+  const weddingDate = new Date("Oct 17, 2026 24:00:00").getTime();
   const countdownEl = document.getElementById("countdown");
 
   setInterval(() => {
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const params = {
       name: document.getElementById("name").value,
+      metgesel: document.getElementById("metgesel").value,
       email: document.getElementById("email").value,
       attendance: document.getElementById("attendance").value,
       message: document.getElementById("message").value
@@ -28,5 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(err => console.error("EmailJS Error:", err));
   });
+
+  const hero = document.querySelector(".hero");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const heroHeight = hero.offsetHeight;
+
+  // Fade out as user scrolls down
+  let opacity = 1 - scrollY / heroHeight;
+  if (opacity < 0) opacity = 0;
+  hero.style.opacity = opacity;
+});
+
 
 });
