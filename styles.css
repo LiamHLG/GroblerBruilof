@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #afc5da;
+  color: #333;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(175,197,218,0.8), rgba(175,197,218,0.8)),
+              url('https://images.unsplash.com/photo-1529634894518-1b81b13a21b1') center/cover no-repeat;
+}
+
+.hero-content {
+  text-align: center;
+  color: #ffffff;
+  padding-top: 25vh;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+}
+
+.btn {
+  padding: 12px 35px;
+  background: #e68688;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.details {
+  background: #ffffff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.accent1 { background: #e68688; color: #fff; }
+.accent2 { background: #f1c064; }
+.accent3 { background: #e47e34; color: #fff; }
+
+.rsvp {
+  padding: 80px 10%;
+  background: #afc5da;
+  text-align: center;
+}
+
+form {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select, textarea, button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background: #e47e34;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}

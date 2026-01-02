@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liam & Danielle | Wedding RSVP</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Liam & Danielle</h1>
+    <p>We’re getting married</p>
+    <span id="countdown"></span>
+    <a href="#rsvp" class="btn">RSVP Now</a>
+  </div>
+</header>
+
+<section class="details">
+  <h2>The Big Day</h2>
+  <div class="cards">
+    <div class="card accent1">
+      <h3>Ceremony & Reception</h3>
+      <p>
+        17 October 2026<br>
+        Tjirp, Parys – Vrystaat, South Africa<br>
+        15:00
+      </p>
+    </div>
+    <div class="card accent2">
+      <h3>Dress Code</h3>
+      <p>Elegant Formal</p>
+    </div>
+    <div class="card accent3">
+      <h3>Our Colours</h3>
+      <p>Dusty Blue • Blush • Gold • Burnt Orange</p>
+    </div>
+  </div>
+</section>
+
+<section class="rsvp" id="rsvp">
+  <h2>Kindly Respond</h2>
+  <form id="rsvpForm">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <select id="attendance" required>
+      <option value="">Will you attend?</option>
+      <option value="Yes">Joyfully Accept</option>
+      <option value="No">Regretfully Decline</option>
+    </select>
+    <textarea id="message" placeholder="Leave us a message..."></textarea>
+    <button type="submit">Send RSVP</button>
+  </form>
+  <p id="successMsg"></p>
+</section>
+
+<footer>
+  <p>With love, Liam & Danielle ❤️</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
