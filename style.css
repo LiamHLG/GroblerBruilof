@@ -46,19 +46,19 @@ body {
   font-size: 300%;
 }
 
+.image-container {
+  text-align: center;
+  margin: 40px 0;
+  height: auto;
+  width: 100%;
+}
+
 .storie-content {
   padding: 80px 10%;
   text-align: center;
   background: #ffffff;
   color: #000000;
   font-size: 200%;
-}
-
-.image-container {
-  text-align: center;
-  margin: 40px 0;
-  height: auto;
-  width: 100%;
 }
 
 .storie-content h1 {
@@ -172,6 +172,24 @@ button {
 .map-btn {
   background: #092202;
 }
+
+.VA-details {
+  background: #ffffff;
+  padding: 80px 10%;
+  text-align: center;
+  font-size: 200%;
+}
+
+.VA-details h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 265%;
+}
+
+.VA-details h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 100%;
+}
+
 
 .image-container {
   display: flex;
