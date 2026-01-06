@@ -32,18 +32,18 @@ body {
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 64px;
+  font-size: 700%;
 }
 
 .hero h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-size: 250%;
 }
 
 .hero h3 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Homemade Apple', sans-serif;
   font-weight: lighter;
-  font-size: 1.8rem;
+  font-size: 300%;
 }
 
 .storie-content {
