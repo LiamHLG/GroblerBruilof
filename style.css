@@ -32,12 +32,12 @@ body {
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 700%;
+  font-size: 600%;
 }
 
 .hero h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 250%;
+  font-size: 400%;
 }
 
 .hero h3 {
@@ -51,16 +51,24 @@ body {
   text-align: center;
   background: #ffffff;
   color: #000000;
+  font-size: 200%;
+}
+
+.image-container {
+  text-align: center;
+  margin: 40px 0;
+  height: auto;
+  width: 100%;
 }
 
 .storie-content h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 64px;
+  font-size: 265%;
 }
 
 .storie-content h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-size: 200%;
 }
 
 .btn {
@@ -75,33 +83,50 @@ body {
   background: #ffffff;
   padding: 80px 10%;
   text-align: center;
+  font-size: 200%;
 }
 
 .details h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 64px;
+  font-size: 265%;
 }
 
 .details h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-size: 200%;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 25px;
+.color-palette {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-.card {
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.color-circle {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border: 3px solid #fff;
 }
 
-.accent1 { background: #e68688; color: #fff; }
-.accent2 { background: #f1c064; }
-.accent3 { background: #e47e34; color: #fff; }
+.color-circle.dusty  { background: #afc5da; }
+.color-circle.blush  { background: #ff8486; }
+.color-circle.gold   { background: #ffea8f; }
+.color-circle.orange { background: #ff9245; }
+.color-circle.lightyellow  { background: #fcb769; }
+.color-circle.lightorange { background: #ffd47d; }
+.color-circle.offblue { background: #d9edf8; }
+.color-circle.skyblue { background: #87b6e2; }
+.color-circle.mossgreen { background: #8e966c; }
+.color-circle.sagegreen { background: #c1d391; }
+.color-circle.beige { background: #d6c9b8; }
+.color-circle.duckegg { background: #93b6af; }
+.color-circle.salmon { background: #ec6b9d; }
+.color-circle.peachpink { background: #ffc3cd; }
+.color-circle.lilac { background: #fad4fc; }
+.color-circle.lightbeige { background: #e7dbc4; }
 
 .rsvp {
   padding: 80px 10%;
@@ -131,39 +156,50 @@ button {
 }
 
 .map {
-  background: #ffffff;
-  padding: 80px 10%;
+  background: #fefffa;
+  padding: 5px 2%;
   text-align: center;
 }
 
 .map iframe {
-  width: 100%;
-  height: 400px;
-  border-radius: 15px;
+  width: 80vw;
+  height: 60vw;
+  border-radius: 5px;
   border: none;
-  margin: 25px 0;
+  margin: 10px 0;
 }
 
 .map-btn {
-  background: #f1c064;
+  background: #092202;
 }
 
-.color-palette {
-  margin-top: 15px;
+.image-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 30px;
+  margin-top: 4%;
 }
 
-.color-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  border: 3px solid #fff;
+.image-container img {
+  width: 25%;
+  height: 50vw;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: opacity 0.1s ease;
 }
 
-.color-circle.dusty  { background: #afc5da; }
-.color-circle.blush  { background: #e68688; }
-.color-circle.gold   { background: #f1c064; }
-.color-circle.orange { background: #e47e34; }
+.image-container img:nth-child(2) {
+  width: 40%;
+  height: 50vw;
+}
+
+.image-container img:nth-child(1),
+.image-container img:nth-child(3) {
+  margin-top: 8%;
+  width: 20%;
+  height: 30vw;
+}
+
+
+
