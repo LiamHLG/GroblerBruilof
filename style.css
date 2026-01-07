@@ -46,11 +46,39 @@ body {
   font-size: 300%;
 }
 
-.image-container {
-  text-align: center;
-  margin: 40px 0;
-  height: auto;
+.image-strip {
+  display: flex;
+  justify-content: center;
   width: 100%;
+  height: 72vh;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 4%;
+}
+
+.image-container img {
+  width: 25%;
+  height: 50vw;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: opacity 0.1s ease;
+}
+
+.image-container img:nth-child(2) {
+  width: 40%;
+  height: 50vw;
+}
+
+.image-container img:nth-child(1),
+.image-container img:nth-child(3) {
+  margin-top: 8%;
+  width: 20%;
+  height: 30vw;
 }
 
 .storie-content {
@@ -129,13 +157,18 @@ body {
 .color-circle.lightbeige { background: #e7dbc4; }
 
 .rsvp {
-  padding: 80px 10%;
+  padding: 10px 10%;
   background: #afc5da;
   text-align: center;
+  font-size: 200%;
+}
+.rsvp h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 200%;
 }
 
 form {
-  max-width: 450px;
+  width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -143,9 +176,10 @@ form {
 }
 
 input, select, textarea, button {
-  padding: 12px;
+  padding: 40px;
   border-radius: 10px;
   border: none;
+  font-size: 100%;
 }
 
 button {
@@ -190,33 +224,32 @@ button {
   font-size: 100%;
 }
 
-
-.image-container {
+/* Flex media block for V + A section */
+.VA-details .media {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 4%;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 2rem 0 1.5rem 0;
+  text-align: left;
 }
-
-.image-container img {
-  width: 25%;
-  height: 50vw;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.VA-details .media img {
+  width: 100%;
+  max-width: 35%;
+  height: auto;
   object-fit: cover;
-  transition: opacity 0.1s ease;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
+.VA-details .media-body { flex: 1; }
+.VA-details .media.reverse { flex-direction: row-reverse; }
 
-.image-container img:nth-child(2) {
-  width: 40%;
-  height: 50vw;
-}
-
-.image-container img:nth-child(1),
-.image-container img:nth-child(3) {
-  margin-top: 8%;
-  width: 20%;
-  height: 30vw;
+@media (max-width: 700px) {
+  .VA-details .media {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .VA-details .media img { width: 100%; max-width: 400px; }
 }
 
 
