@@ -183,7 +183,7 @@ input, select, textarea, button {
 }
 
 button {
-  background: #e47e34;
+  background: #0e3304;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -204,7 +204,7 @@ button {
 }
 
 .map-btn {
-  background: #092202;
+  background: #0e3304;
 }
 
 .VA-details {
