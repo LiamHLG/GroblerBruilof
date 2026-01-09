@@ -157,7 +157,7 @@ body {
 
 .rsvp {
   padding: 10px 10%;
-  background: url('L+D-05331.jpg') no-repeat top right;
+  background: url('L+D-05331.jpg') no-repeat top center;
   background-size: cover;
   text-align: center;
   font-size: 200%;
@@ -169,7 +169,6 @@ body {
 }
 
 form {
-  width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -177,6 +176,7 @@ form {
 }
 
 input, select, textarea, button {
+  width: 100%;
   padding: 40px;
   border-radius: 10px;
   border: none;

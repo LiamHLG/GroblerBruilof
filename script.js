@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const weddingDate = new Date("Oct 17, 2026 00:00:00").getTime();
+  const weddingDate = new Date("Oct 17, 2026 15:30:00").getTime();
   const countdownEl = document.getElementById("countdown");
 
   setInterval(() => {
