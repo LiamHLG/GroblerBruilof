@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = {
       name: document.getElementById("name").value,
       metgesel: document.getElementById("metgesel").value,
-      email: document.getElementById("email").value,
       attendance: document.getElementById("attendance").value,
+      dieetvereistes: document.getElementById("dieetvereistes").value,
+      liedjie: document.getElementById("liedjie").value,
       message: document.getElementById("message").value
     };
 
