@@ -13,6 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("rsvpForm").addEventListener("submit", e => {
     e.preventDefault();
 
+    // Prevent duplicate submissions
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    if (submitBtn && submitBtn.dataset.sending === 'true') return;
+    if (submitBtn) {
+      submitBtn.dataset.sending = 'true';
+      submitBtn.disabled = true;
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = 'Sending...';
+      // store original text so we can restore it later
+      submitBtn.dataset.originalText = originalText;
+    }
+
     const params = {
       name: document.getElementById("name").value,
       metgesel: document.getElementById("metgesel").value,
@@ -27,8 +39,24 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("successMsg").innerText =
           "Thank you " + params.name + "! Your RSVP has been sent successfully !";
         e.target.reset();
+        // restore button state
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.dataset.sending = 'false';
+          submitBtn.innerText = submitBtn.dataset.originalText || 'Send RSVP';
+          delete submitBtn.dataset.originalText;
+        }
       })
-      .catch(err => console.error("EmailJS Error:", err));
+      .catch(err => {
+        console.error("EmailJS Error:", err);
+        // restore button state on error as well
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.dataset.sending = 'false';
+          submitBtn.innerText = submitBtn.dataset.originalText || 'Send RSVP';
+          delete submitBtn.dataset.originalText;
+        }
+      });
   });
 
   const hero = document.querySelector(".hero");
