@@ -265,3 +265,56 @@ button {
   object-fit: cover;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.nav-menu.open {
+  right: 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 50px 0 0 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  padding: 15px 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 275%;
+}
+
+.nav-menu a:hover {
+  color: #e68688;
+}
+

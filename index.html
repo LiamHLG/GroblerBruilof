@@ -16,7 +16,7 @@
 </script>
 
 <body>
-<div class="hero">
+<div class="hero" id="hero">
   <div class="overlay"></div>
   <div class="hero-content" >
     <br/><h1>Liam & Daniélle</h1>
@@ -25,13 +25,27 @@
   </div>
 </div>
 
+<button id="hamburger" class="hamburger">☰</button>
+
+<nav id="nav-menu" class="nav-menu">
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#story">Ons Storie</a></li>
+<li><a href="#details">Details</a></li>
+<li><a href="#accommodation">Verblyf</a></li>
+<li><a href="#qa">V + A</a></li>
+<li><a href="#registry">Register</a></li>
+<li><a href="#rsvp">RSVP</a></li>
+</ul>
+</nav>
+
 <div class="image-container">
 <img src="L+D-05132.jpg" alt="Dani en Liam by die muur">
 <img src="L+D-05291.jpg" alt="Dani en Liam is excited">
 <img src="L+D-05151.jpg" alt="Ring op feildbar">
 </div>
 
-<div class="storie-content">
+<div class="storie-content" id="story">
     <h1>Ons Storie</h1>
     <h2>2022</h2>
       <img src="WhatsApp Image 2026-01-02 at 16.59.44_a97fec39.jpg" alt="Liam and Daniélle" style="width: 70%;height: 70%;">
@@ -64,7 +78,7 @@
 </div>
 
 
-<section class="details">
+<section class="details" id="details">
   <h1>Ons Troudag</h1>
   <h3> Die Grobler Troue </h3>
   <p class="details-skrif">Saterdag, 17 Oktober 2026</p>
@@ -135,13 +149,34 @@
 
 </section>
 
-<div class="VA-details">
+<div class="VA-details" id="accommodation">
     
     <h1>Verblyf Opsies</h1>
+    <h2>Parys</h2><br/>
+
+    <p>
+      <b>Eagle's Nest</b></p><br/>
+      <img src="598440699.jpg" style="width: 75%; height: auto;"><br/><br/>
+      <a class="btn map-btn"
+         href="https://www.booking.com/Share-7sJ9ob"
+         target="_blank">
+        Sien Bookings
+      </a>
+    </p>
+
+    <p><br/><br/>
+      <b>Farm stay in Rooderand</b></p><br/>
+      <img src="4d52153b-b721-48eb-89e8-eb026ec522a1.avif" style="width: 75%; height: auto;"><br/><br/>
+      <a class="btn map-btn"
+         href="https://www.airbnb.com/rooms/813008099462381575?viralityEntryPoint=1&s=76"
+         target="_blank">
+        Sien Bookings
+      </a>
+    </p>
 
 </div>
 
-<div class="VA-details"> 
+<div class="VA-details" id="qa"> 
 
     <h1> V + A</h1>
     <div class="media">
@@ -201,7 +236,7 @@
 <img src="L+D-05308.jpg" alt="Ring op feildbar">
 </div>
 
-<div class="VA-details"> 
+<div class="VA-details" id="registry"> 
 
     <h1>Trou Register</h1>
     <p>Ons is geseend dat ons al 'n rukkie aan ons trousseau kis werk en dat hy reedlik volledig is.
