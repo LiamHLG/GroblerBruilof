@@ -84,6 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let opacity = 1 - scrollY / heroHeight;
     if (opacity < 0) opacity = 0;
     hero.style.opacity = opacity;
+
+    // Change hamburger button color when scrolling past hero
+    if (scrollY > heroHeight) {
+      hamburger.classList.add('scrolled');
+    } else {
+      hamburger.classList.remove('scrolled');
+    }
   });
 
   // Fade in image container on scroll, similar to hero fade

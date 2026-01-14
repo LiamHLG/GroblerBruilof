@@ -176,7 +176,7 @@ form {
 }
 
 input, select, textarea, button {
-  width: 100%;
+  width: auto;
   padding: 40px;
   border-radius: 10px;
   border: none;
@@ -223,34 +223,49 @@ button {
 
 .VA-details h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 100%;
+  font-size: 200%;
 }
 
 /* Flex media block for V + A section */
 .VA-details .media {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: stretch;
   margin: 2rem 0 1.5rem 0;
   text-align: left;
+  min-height: 300px;
 }
-.VA-details .media img {
-  width: 40%;
+.VA-details .media-images {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.VA-details .media-images img {
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  flex: 1;
 }
-.VA-details .media-body { flex: 1; }
-.VA-details .media.reverse { flex-direction: row-reverse; }
+.VA-details .media-body { 
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
 
-@media (max-width: 700px) {
-  .VA-details .media {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .VA-details .media img { width: 100%; max-width: 400px; }
+.VA-details .media-body h2 {
+  font-size: 140%;
+  margin-top: 0;
+}
+
+.VA-details .media-body p {
+  font-size: 90%;
+  line-height: 1.6;
 }
 
 .photo-strip {
@@ -272,15 +287,20 @@ button {
   right: 20px;
   width: 50px;
   height: 50px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0);
   color: white;
   border: none;
-  font-size: 30px;
+  font-size: 400%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+.hamburger.scrolled {
+  color: black;
 }
 
 .nav-menu {
