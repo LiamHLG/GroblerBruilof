@@ -173,7 +173,7 @@ body {
   cursor: pointer;
 
   background:
-    radial-gradient(circle at 30% 30%, #b8ffbc, #2c6b24, #092705),
+    radial-gradient(circle at 30% 30%, #2c6b24, #2c6b24, #092705),
     linear-gradient(135deg, rgba(255,255,255,0.25), rgba(0,0,0,0.15));
   
   box-shadow:
@@ -207,30 +207,6 @@ body {
     inset 0 -2px 6px rgba(255,255,255,0.3),
     inset 0 2px 6px rgba(0,0,0,0.35);
 }
-
-/* Crack animation */
-.wax-seal.crack {
-  animation: crackPop 0.85s cubic-bezier(.4,1.6,.5,1) forwards;
-}
-
-@keyframes crackPop {
-  0% { transform: translate(-50%, -50%) scale(1); }
-  30% { transform: translate(-50%, -50%) scale(1.08); }
-  60% { transform: translate(-50%, -50%) scale(0.88); }
-  100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-}
-
-/* Crack lines (moved to overlay instead of replacing texture) */
-.wax-seal.crack::before {
-  background:
-    linear-gradient(40deg, transparent 48%, rgba(255,255,255,0.9) 50%, transparent 52%),
-    linear-gradient(-20deg, transparent 48%, rgba(255,255,255,0.9) 50%, transparent 52%),
-    linear-gradient(80deg, transparent 48%, rgba(255,255,255,0.9) 50%, transparent 52%),
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.3), transparent 60%),
-    radial-gradient(circle at 80% 80%, rgba(0,0,0,0.25), transparent 60%);
-}
-
-
 
 
 
