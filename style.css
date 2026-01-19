@@ -5,6 +5,235 @@ body {
   color: #333;
 }
 
+#envelope-intro {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #dbe5f0, #afc5da);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Fullscreen envelope */
+.full-envelope {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.08);
+  perspective: 1200px; /* Enables real 3D flap */
+}
+
+/* Subtle paper grain */
+.full-envelope::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.04) 0,
+      rgba(255,255,255,0.04) 2px,
+      rgba(0,0,0,0.03) 3px,
+      rgba(0,0,0,0.03) 4px
+    );
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Back of envelope */
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #fdfcf8, #f1ede6);
+  z-index: 1;
+}
+
+/* Front triangle */
+.envelope-front {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55%;
+  z-index: 3;
+  clip-path: polygon(0 0, 100% 0, 50% 70%);
+  box-shadow: 0 -6px 12px rgba(0,0,0,0.08);
+}
+
+/* Flap */
+.envelope-flap {
+  position: absolute;
+  margin-left: 180px;
+  top: 82px;
+  width: 76%;
+  height: 55%;
+  background:
+    linear-gradient(135deg, #f8e9ce, #f0be62),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.5) 0px,
+      rgba(255,255,255,0.5) 1px,
+      rgba(0,0,0,1) 1px,
+      rgba(0,0,0,1) 2px
+    ),
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(0,0,0,0.05) 0%, transparent 50%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 1.2s cubic-bezier(.3,.7,.2,1);
+  z-index: 4;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  backface-visibility: hidden;
+}
+
+.envelope-flap h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  margin: 0;
+  color: #b08d2d;
+}
+
+.envelope-flap p {
+  margin-top: 14px;
+  font-size: 16px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* Letter */
+.envelope-letter {
+  position: absolute;
+  inset: 12%;
+  background: linear-gradient(180deg, #ffffff, #f9f7f3);
+  border-radius: 6px;
+  padding: 40px 25px;
+  z-index: 2;
+  transition: transform 1.2s ease, opacity 1s ease;
+  
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.envelope-letter h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  margin: 0;
+  color: #b08d2d;
+}
+
+.envelope-letter p {
+  margin-top: 14px;
+  font-size: 16px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* Opening animation */
+.full-envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+.full-envelope.open .envelope-letter {
+  transform: translateY(-160%);
+  opacity: 0;
+}
+
+/* Fade out */
+#envelope-intro.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease;
+}
+
+/* -------------------- WAX SEAL -------------------- */
+
+.wax-seal {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 150px;
+  height: 130px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 3px;
+  cursor: pointer;
+
+  background:
+    radial-gradient(circle at 30% 30%, #b8ffbc, #2c6b24, #092705),
+    linear-gradient(135deg, rgba(255,255,255,0.25), rgba(0,0,0,0.15));
+  
+  box-shadow:
+    inset 0 -2px 6px rgba(255,255,255,0.35),
+    inset 0 4px 8px rgba(0,0,0,0.35),
+    0 2px 4px rgba(0,0,0,0.2);
+
+  border: 2px solid rgba(255,255,255,0.35);
+}
+
+/* Melted wax edge texture */
+.wax-seal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.3), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(0,0,0,0.25), transparent 60%);
+  opacity: 0.7;
+}
+
+/* Raised embossed ring */
+.wax-seal::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.4);
+  box-shadow:
+    inset 0 -2px 6px rgba(255,255,255,0.3),
+    inset 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* Crack animation */
+.wax-seal.crack {
+  animation: crackPop 0.85s cubic-bezier(.4,1.6,.5,1) forwards;
+}
+
+@keyframes crackPop {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  30% { transform: translate(-50%, -50%) scale(1.08); }
+  60% { transform: translate(-50%, -50%) scale(0.88); }
+  100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+}
+
+/* Crack lines (moved to overlay instead of replacing texture) */
+.wax-seal.crack::before {
+  background:
+    linear-gradient(40deg, transparent 48%, rgba(255,255,255,0.9) 50%, transparent 52%),
+    linear-gradient(-20deg, transparent 48%, rgba(255,255,255,0.9) 50%, transparent 52%),
+    linear-gradient(80deg, transparent 48%, rgba(255,255,255,0.9) 50%, transparent 52%),
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.3), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(0,0,0,0.25), transparent 60%);
+}
+
+
+
+
+
 .hero {
   height: 100vh;
   background: #afc5da url('L+D-05315.jpg') no-repeat center center;

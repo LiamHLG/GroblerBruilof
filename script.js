@@ -1,5 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+const envelope = document.querySelector(".full-envelope");
+const intro = document.getElementById("envelope-intro");
+const seal = document.querySelector(".wax-seal");
+
+seal.addEventListener("click", () => {
+  // Crack the wax
+  seal.classList.add("crack");
+
+  // Open envelope AFTER crack animation
+  setTimeout(() => {
+    envelope.classList.add("open");
+  }, 700);
+
+  // Fade intro out
+  setTimeout(() => {
+    intro.classList.add("fade-out");
+  }, 1300);
+});
+
+
+
   const weddingDate = new Date("Oct 17, 2026 15:30:00").getTime();
   const countdownEl = document.getElementById("countdown");
 
