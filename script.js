@@ -1,15 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-  const weddingDate = new Date("Oct 17, 2026 15:30:00").getTime();
-  const countdownEl = document.getElementById("countdown");
+  const weddingDate = new Date("2026-10-17T15:30:00");
+const countdownEl = document.getElementById("countdown");
 
-  setInterval(() => {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    countdownEl.innerHTML = days + " days to go!";
-  }, 1000);
+function updateCountdown() {
+  const now = new Date();
+
+  // Reset both times to midnight to compare dates, not hours
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const weddingDay = new Date(
+    weddingDate.getFullYear(),
+    weddingDate.getMonth(),
+    weddingDate.getDate()
+  );
+
+  const distance = weddingDay - today;
+  const days = Math.ceil(distance / (1000 * 60 * 60 * 24));
+
+  countdownEl.innerHTML = `${days} days to go!`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 60 * 1000); 
 
   document.getElementById("rsvpForm").addEventListener("submit", e => {
     e.preventDefault();
