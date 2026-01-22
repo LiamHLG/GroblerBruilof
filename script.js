@@ -41,7 +41,6 @@ setInterval(updateCountdown, 60 * 1000);
 
     const params = {
       name: document.getElementById("name").value,
-      metgesel: document.getElementById("metgesel").value,
       attendance: document.getElementById("attendance").value,
       dieetvereistes: document.getElementById("dieetvereistes").value,
       liedjie: document.getElementById("liedjie").value,
