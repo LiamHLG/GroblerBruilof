@@ -197,7 +197,7 @@ function showResult(area) {
   const msg = msgs.find(([min]) => pct >= min)[1];
   area.innerHTML = `
     <div class="result-card">
-      <p style="font-size:14px;color:#888;margin:0 0 4px">Jou finale telling</p>
+      <p style="font-size:34px;color:#888;margin:0 0 4px">Jou finale telling</p>
       <p class="result-score">${score}/${questions.length}</p>
       <p class="result-label">${pct}% reg</p>
       <p class="result-msg">${msg}</p>
