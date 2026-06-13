@@ -333,7 +333,7 @@ button {
 .nav-menu a {
   color: white;
   text-decoration: none;
-  font-size: 200%;
+  font-size: 40px;
 }
 
 .nav-menu a:hover {
