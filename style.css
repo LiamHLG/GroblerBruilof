@@ -345,7 +345,7 @@ button {
   .progress-bar-fill { background: #72916c; border-radius: 99px; height: 20px; transition: width 0.4s ease; }
   .question-card { background: #fff; border: 5px solid #e0e0e0; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
   .q-number { font-size: 45px; color: #888; margin-bottom: 6px; }
-  .q-text { font-size: 50px; font-weight: 500; color: #1a1a1a; margin-bottom: 1.25rem; line-height: 1.4; }
+  .q-text { font-size: 40px; font-weight: 500; color: #1a1a1a; margin-bottom: 1.25rem; line-height: 1.4; }
   .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .choice-btn { padding: 14px 10px; border: 3px solid #ddd; border-radius: 8px; background: #fff; color: #1a1a1a; font-size: 50px; font-weight: 500; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 8px; }
   .choice-btn:hover { background: #f9f9f9; }
