@@ -130,7 +130,7 @@ const questions = [
   { q: "Wie is die grappirige een?", answer: "Liam", hint: "Hy is die snaakste persoon wat sy ken!" },
   { q: "Wie is die geduldigste?", answer: "Liam", hint: "Hy wag... en wag... en wag." },
   { q: "Wie het eerste gesê 'ek is lief vir jou'?", answer: "Liam", hint: "If you know you know." },
-  { q: "Wie kook die beste?", answer: "Dani", hint: "Maar leer hom mooi." },
+  { q: "Wie kook die beste?", answer: "Dani", hint: "Maar sy leer hom mooi." },
   { q: "Wie neem die langste om gereed te maak?", answer: "Dani", hint: "Mooi dinge neem tyd!" },
   { q: "Wie vat die lankste om wakker te word?", answer: "Liam", hint: "Oggendmens? Nie almal nie." },
   { q: "Wie is meer kompeterend?", answer: "Dani", hint: "Cludo is die ergste!" },
