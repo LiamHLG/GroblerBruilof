@@ -42,15 +42,17 @@ setInterval(updateCountdown, 60 * 1000);
     const params = {
       name: document.getElementById("name").value,
       attendance: document.getElementById("attendance").value,
+      metgesel: document.getElementById("metgesel").value,
       dieetvereistes: document.getElementById("dieetvereistes").value,
       liedjie: document.getElementById("liedjie").value,
-      message: document.getElementById("message").value
+      message: document.getElementById("message").value,
+      percentage: quizPercentage !== null ? quizPercentage + "%" : "Het nie die quiz gedoen nie"
     };
 
     emailjs.send("service_kbxfxac", "template_ihkr5oc", params)
       .then(() => {
         document.getElementById("successMsg").innerText =
-          "Thank you " + params.name + "! Your RSVP has been sent successfully !";
+          "Thank you " + params.name + " and " + params.metgesel + "! Your RSVP has been sent successfully !";
         e.target.reset();
         // restore button state
         if (submitBtn) {
@@ -141,6 +143,7 @@ const questions = [
 ];
  
 let current = 0, score = 0, answered = false;
+let quizPercentage = null;
  
 function render() {
   const area = document.getElementById('quiz-area');
@@ -188,6 +191,7 @@ function next() { current++; render(); }
 function showResult(area) {
   document.getElementById('progress').style.width = '100%';
   const pct = Math.round(score / questions.length * 100);
+  quizPercentage = pct;
   const msgs = [
     [90, "Kyk nou vir jou! Is jy seker jy is nie 'n derde wiel nie?"],
     [70, "So naby! Jy ken ons goed."],
@@ -208,3 +212,4 @@ function showResult(area) {
 function restart() { current = 0; score = 0; answered = false; document.getElementById('progress').style.width = '0%'; render(); }
  
 render();
+
